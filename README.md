@@ -21,47 +21,44 @@ GitHub Actionsの詳細な情報は公式ドキュメントを参照してくだ
 
 GitHub Actionsで利用可能なイベント（トリガー）の一覧：
 
-### Column 1
-- `branch_protection_rule`
-- `check_run`
-- `check_suite`
-- `create`
-- `delete`
-- `deployment`
-- `deployment_status`
-- `discussion`
-- `discussion_comment`
-- `fork`
-- `gollum`
-- `issue_comment`
-
-### Column 2
-- `issues`
-- `label`
-- `merge_group`
-- `milestone`
-- `page_build`
-- `project`
-- `project_card`
-- `project_column`
-- `public`
-- `pull_request`
-- `pull_request_comment`
-- `pull_request_review`
-
-### Column 3
-- `pull_request_review_comment`
-- `pull_request_target`
-- `push`
-- `registry_package`
-- `release`
-- `repository_dispatch`
-- `schedule`
-- `status`
-- `watch`
-- `workflow_call`
-- `workflow_dispatch`
-- `workflow_run`
+| イベント名 | 説明 | 用途 |
+|-----------|------|------|
+| `push` | コードがプッシュされた時 | 基本的なCI/CD |
+| `pull_request` | プルリクエストが作成/更新された時 | コードレビュー前のテスト |
+| `issues` | イシューが作成/更新された時 | イシュー管理の自動化 |
+| `release` | リリースが作成された時 | リリース時の自動処理 |
+| `schedule` | 定期的な実行 | 定期メンテナンス |
+| `workflow_dispatch` | 手動実行 | デバッグや緊急時 |
+| `create` | ブランチ/タグが作成された時 | 新機能開発の開始 |
+| `delete` | ブランチ/タグが削除された時 | クリーンアップ処理 |
+| `fork` | リポジトリがフォークされた時 | フォーク時の処理 |
+| `public` | リポジトリが公開された時 | 公開時の処理 |
+| `watch` | リポジトリがスターされた時 | 統計収集 |
+| `gollum` | Wikiページが更新された時 | Wiki管理 |
+| `page_build` | GitHub Pagesがビルドされた時 | ページ管理 |
+| `status` | コミットステータスが更新された時 | ステータス管理 |
+| `check_run` | チェック実行が完了した時 | テスト結果処理 |
+| `check_suite` | チェックスイートが完了した時 | テストスイート管理 |
+| `deployment` | デプロイメントが作成された時 | デプロイ管理 |
+| `deployment_status` | デプロイメントステータスが更新された時 | デプロイ監視 |
+| `milestone` | マイルストーンが更新された時 | プロジェクト管理 |
+| `project` | プロジェクトが更新された時 | プロジェクト管理 |
+| `project_card` | プロジェクトカードが更新された時 | プロジェクト管理 |
+| `project_column` | プロジェクトカラムが更新された時 | プロジェクト管理 |
+| `label` | ラベルが更新された時 | ラベル管理 |
+| `discussion` | ディスカッションが更新された時 | コミュニティ管理 |
+| `discussion_comment` | ディスカッションコメントが更新された時 | コミュニティ管理 |
+| `issue_comment` | イシューコメントが更新された時 | コメント管理 |
+| `pull_request_comment` | プルリクエストコメントが更新された時 | レビュー管理 |
+| `pull_request_review` | プルリクエストレビューが更新された時 | レビュー管理 |
+| `pull_request_review_comment` | プルリクエストレビューコメントが更新された時 | レビュー管理 |
+| `pull_request_target` | フォークからのプルリクエスト | セキュリティ考慮 |
+| `registry_package` | パッケージが公開された時 | パッケージ管理 |
+| `repository_dispatch` | 外部からのイベント | 外部システム連携 |
+| `workflow_call` | 他のワークフローから呼び出し | ワークフロー再利用 |
+| `workflow_run` | ワークフローが完了した時 | ワークフロー連携 |
+| `merge_group` | マージグループが更新された時 | マージ管理 |
+| `branch_protection_rule` | ブランチ保護ルールが更新された時 | セキュリティ管理 |
 
 ## 🚀 学習のポイント
 
