@@ -1,0 +1,14 @@
+name: Environment variables
+on: push
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: main
+      ACTOR: ${{ github.actor }}
+    steps:
+      - run: echo "${BRANCH}"
+      - run: echo "${ACTOR}"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
